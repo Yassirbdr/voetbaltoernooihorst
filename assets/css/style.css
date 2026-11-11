@@ -1,0 +1,245 @@
+/* ===== Voetbaldagen Horst 2027 – huisstijl ===== */
+:root{--navy:#0B1F33;--groen:#0E7A3E;--gras:#22C55E;--oranje:#FF7A1A;--goud:#FFC93C;--creme:#FAF7F0;--zand:#F1EBDD;--inkt:#14213D;--rood:#D63031;--r:18px;--schaduw:0 10px 30px rgba(11,31,51,.12)}
+*{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--creme);color:var(--inkt);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:'Anton',Impact,sans-serif;text-transform:uppercase;line-height:1.05;letter-spacing:.5px;font-weight:400}
+h1{font-size:clamp(2.6rem,8vw,6rem)}
+h2{font-size:clamp(2rem,5vw,3.4rem)}
+h3{font-size:1.5rem}
+.container{width:min(1200px,92%);margin:0 auto}
+.oranje{color:var(--oranje)}.goud{color:var(--goud)}
+.eyebrow{display:inline-block;font-weight:800;font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;color:var(--goud);margin-bottom:.8rem}
+
+/* Header */
+.site-header{position:fixed;top:0;left:0;right:0;z-index:50;transition:.3s;padding:14px 0}
+.site-header.solide{background:rgba(11,31,51,.96);backdrop-filter:blur(8px);box-shadow:0 4px 20px rgba(0,0,0,.2);padding:10px 0}
+.header-in{display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:'Anton',sans-serif;font-size:1.35rem;letter-spacing:1px;color:#fff;text-transform:uppercase}
+.logo b{color:var(--goud);font-weight:400}
+.nav{display:flex;align-items:center;gap:26px}
+.nav a:not(.btn){color:#fff;font-weight:600;font-size:.95rem;opacity:.9}
+.nav a:not(.btn):hover,.nav a.actief{opacity:1;color:var(--goud)}
+.menu-knop{display:none;background:none;border:0;cursor:pointer;width:44px;height:44px;flex-direction:column;justify-content:center;gap:6px;align-items:center}
+.menu-knop span{display:block;width:26px;height:3px;background:#fff;border-radius:3px}
+
+/* Knoppen */
+.btn{display:inline-block;padding:15px 30px;border-radius:999px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;font-size:.9rem;border:2px solid transparent;cursor:pointer;transition:.2s;font-family:inherit;text-align:center}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.25)}
+.btn:active{transform:scale(.97)}
+.btn-oranje{background:var(--oranje);color:#fff}
+.btn-lijn{border-color:#fff;color:#fff}
+.btn-groen{background:var(--groen);color:#fff}
+.btn-grijs{background:#e5e1d6;color:var(--inkt)}
+.btn-rood{background:var(--rood);color:#fff}
+.btn-klein{padding:9px 18px;font-size:.75rem}
+.btn[disabled]{opacity:.5;cursor:not-allowed;transform:none;box-shadow:none}
+.knoppen{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+
+/* Hero en pagina-kop (foto: zet assets/img/hero.jpg neer, anders zie je een grasveld-patroon) */
+.hero,.kop{position:relative;color:#fff;overflow:hidden;
+  background:linear-gradient(180deg,rgba(11,31,51,.55),rgba(11,31,51,.92)),url(../img/hero.jpg) center/cover,repeating-linear-gradient(90deg,#0E7A3E 0 80px,#128a47 80px 160px)}
+.hero{min-height:94vh;display:flex;align-items:center;padding:140px 0 130px}
+.kop{padding:140px 0 60px;border-bottom:6px solid var(--acc,var(--oranje))}
+.hero::after,.kop::after{content:'';position:absolute;right:-140px;bottom:-140px;width:520px;height:520px;border:4px solid rgba(255,255,255,.12);border-radius:50%;pointer-events:none}
+.hero p,.kop p{max-width:600px;font-size:1.15rem;opacity:.92;margin:1.2rem 0 1.6rem}
+.terug{display:inline-block;color:var(--goud);font-weight:700;margin-bottom:14px;font-size:.9rem}
+.hero-info{position:absolute;left:0;right:0;bottom:0;background:rgba(11,31,51,.82);backdrop-filter:blur(6px);z-index:2}
+.hero-info .container{display:flex;flex-wrap:wrap;gap:10px 44px;padding:18px 0;font-weight:700}
+.hero-info b{color:var(--goud);font-family:'Anton';font-weight:400;font-size:1.4rem;margin-right:6px}
+
+/* Marquee */
+.marquee{background:var(--oranje);color:#fff;overflow:hidden;white-space:nowrap;font-family:'Anton',sans-serif;font-size:1.3rem;letter-spacing:2px;padding:14px 0}
+.marquee div{display:inline-block;animation:scroll 30s linear infinite}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* Secties */
+.sectie{padding:90px 0}
+.sectie-zand{background:var(--zand)}
+.sectie-navy{background:var(--navy);color:#fff}
+.schuin{clip-path:polygon(0 5vw,100% 0,100% calc(100% - 5vw),0 100%);margin:-3vw 0;padding:calc(5vw + 70px) 0}
+.sectie-kop{max-width:720px;margin-bottom:40px}
+.sectie-kop p{margin-top:14px;font-size:1.1rem}
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.paneel{background:#fff;border-radius:var(--r);padding:34px;box-shadow:var(--schaduw)}
+.paneel h3{margin-bottom:12px}
+.weetje{background:linear-gradient(135deg,var(--goud),#ffb300);color:var(--navy);border-radius:var(--r);padding:28px;font-weight:700;font-size:1.1rem;box-shadow:var(--schaduw)}
+.weetje small{display:block;font-family:'Anton';font-weight:400;letter-spacing:1px;font-size:1rem;margin-bottom:6px;text-transform:uppercase}
+.respect{border-left:8px solid var(--groen);background:#fff;padding:26px 30px;border-radius:var(--r);font-family:'Anton';font-size:1.8rem;text-transform:uppercase;box-shadow:var(--schaduw)}
+
+/* Toernooikaarten */
+.t-kaart{position:relative;border-radius:var(--r);overflow:hidden;min-height:440px;color:#fff;display:flex;flex-direction:column;justify-content:flex-end;padding:28px;
+  background:linear-gradient(180deg,rgba(11,31,51,.05),rgba(11,31,51,.92)),repeating-linear-gradient(90deg,transparent 0 60px,rgba(255,255,255,.05) 60px 120px),linear-gradient(135deg,var(--acc),var(--navy));
+  box-shadow:var(--schaduw);transition:.3s}
+.t-kaart:hover{transform:translateY(-8px)}
+.t-kaart .groot-icoon{position:absolute;top:18px;right:22px;font-size:4.5rem}
+.t-kaart p{margin:10px 0 16px;opacity:.95}
+.plekken{font-size:.85rem;font-weight:700}
+.balk{height:8px;background:rgba(255,255,255,.25);border-radius:9px;overflow:hidden;margin-top:6px}
+.balk i{display:block;height:100%;background:var(--goud);border-radius:9px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{background:var(--zand);padding:6px 14px;border-radius:999px;font-weight:600;font-size:.85rem}
+
+/* Voordelen */
+.voordeel{background:#fff;border-radius:var(--r);padding:28px;box-shadow:var(--schaduw);transition:.3s}
+.voordeel:hover{transform:translateY(-6px)}
+.sectie-navy .voordeel{background:rgba(255,255,255,.08);box-shadow:none;border:1px solid rgba(255,255,255,.12)}
+.voordeel span{font-size:2.4rem;display:block;margin-bottom:8px}
+.voordeel h3{font-size:1.2rem}
+
+/* Formulieren */
+.veld{position:relative;margin-bottom:20px}
+.veld label{display:block;font-weight:700;font-size:.85rem;margin-bottom:6px}
+.veld input,.veld select,.veld textarea{width:100%;padding:16px 18px;border:2px solid #d9d3c3;border-radius:14px;font:inherit;background:#fff;color:var(--inkt);transition:.2s}
+.veld textarea{min-height:130px;resize:vertical}
+.veld input:focus,.veld select:focus,.veld textarea:focus{outline:none;border-color:var(--gras);box-shadow:0 0 0 4px rgba(34,197,94,.2)}
+.veld.fout input,.veld.fout textarea{border-color:var(--rood);animation:schud .3s}
+.fout-tekst,.fout-melding{color:var(--rood);font-size:.85rem;font-weight:600;display:block;margin-top:4px}
+@keyframes schud{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.rij2{display:grid;grid-template-columns:1fr 1fr;gap:0 20px}
+.melding{padding:14px 18px;border-radius:12px;margin-bottom:18px;font-weight:600}
+.melding.fout{background:#fde2e2;color:#8a1c1c}
+.melding.ok{background:#dcf5e4;color:#0b6a35}
+.melding.info{background:#fff4d6;color:#7a5500}
+.melding ul{margin-left:18px}
+.vinkje{display:flex;gap:12px;align-items:flex-start;background:var(--zand);padding:18px;border-radius:14px;cursor:pointer;font-weight:600}
+.vinkje input{width:22px;height:22px;margin-top:3px;accent-color:var(--groen);flex:none}
+
+/* Inschrijven */
+.stepper{display:flex;list-style:none;gap:8px;margin-bottom:30px}
+.stepper li{flex:1;display:flex;align-items:center;gap:10px;padding:12px 14px;border-radius:14px;background:#fff;color:#8a8574;font-weight:700;font-size:.85rem;border:2px solid transparent;transition:.3s}
+.stepper li b{font-family:'Anton';font-size:1.3rem;font-weight:400}
+.stepper li.actief{border-color:var(--oranje);color:var(--inkt)}
+.stepper li.actief b{color:var(--oranje)}
+.stepper li.klaar{color:var(--groen)}
+.stepper li.klaar b{font-size:0}
+.stepper li.klaar b::after{content:'✓';font-size:1.4rem}
+.inschrijf{display:grid;grid-template-columns:1fr 360px;gap:36px;align-items:start}
+.stap h2{font-size:2.2rem;margin-bottom:6px}
+.stap>p{margin-bottom:24px;color:#5a5f6e}
+.stap-knoppen{display:flex;justify-content:space-between;gap:12px;margin-top:26px;flex-wrap:wrap}
+
+/* Keuze- en kiezen-kaarten (clubs, landen, dagen, taken) */
+.zoekbalk{margin-bottom:14px}
+.gekozen-chip{display:inline-block;background:var(--goud);color:var(--navy);font-weight:800;border-radius:999px;padding:6px 16px;margin-bottom:16px}
+.keuze-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.keuze-kaart,.kies-kaart{position:relative;cursor:pointer;display:block}
+.keuze-kaart input,.kies-kaart input{position:absolute;opacity:0;inset:0;cursor:pointer}
+.kaart-in{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center;padding:18px 8px;background:#fff;border:2px solid #e3ddcc;border-radius:16px;transition:.2s;height:100%;font-size:.9rem}
+.keuze-kaart:hover .kaart-in,.kies-kaart:hover .kaart-in{transform:translateY(-4px);box-shadow:var(--schaduw)}
+.keuze-kaart input:checked+.kaart-in,.kies-kaart input:checked+.kaart-in{border-color:var(--goud);background:#FFF8E0;transform:scale(1.04)}
+.keuze-kaart input:focus-visible+.kaart-in,.kies-kaart input:focus-visible+.kaart-in{outline:3px solid var(--oranje)}
+.vink{position:absolute;top:8px;right:8px;width:24px;height:24px;border-radius:50%;background:var(--gras);color:#fff;display:grid;place-items:center;font-size:.8rem;transform:scale(0);transition:.2s}
+input:checked+.kaart-in .vink{transform:scale(1)}
+.keuze-kaart.bezet .kaart-in{opacity:.45;cursor:not-allowed;filter:grayscale(1)}
+.keuze-kaart.bezet input{cursor:not-allowed}
+.kaart-in small{color:var(--rood);font-weight:700}
+.wapen{position:relative;width:70px;height:70px;border-radius:50%;background:var(--kl);display:grid;place-items:center;color:#fff;font-weight:800;overflow:hidden;font-style:normal}
+.wapen em{font-style:normal;text-shadow:0 1px 3px rgba(0,0,0,.4)}
+.wapen img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+.wapen.geladen{background:none;overflow:visible}
+.wapen.geladen em{display:none}
+.landen .wapen.geladen{overflow:hidden}
+.landen .wapen img{object-fit:cover}
+.kies-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:12px;margin-bottom:24px}
+.kies-kaart .kaart-in{padding:20px 10px}
+.kies-kaart .icoon{font-size:2rem}
+
+/* Spelerskaarten */
+.speler-kaart{display:flex;gap:14px;align-items:flex-start;background:#fff;border:2px solid #e3ddcc;border-radius:16px;padding:14px;margin-bottom:12px;animation:in .3s}
+@keyframes in{from{opacity:0;transform:translateY(10px)}}
+.shirt{font-family:'Anton';font-size:1.7rem;background:var(--navy);color:var(--goud);min-width:56px;height:56px;border-radius:12px;display:grid;place-items:center;margin-top:24px}
+.speler-velden{display:grid;grid-template-columns:1fr 130px;gap:12px;flex:1}
+.speler-velden .veld{margin:0}
+.speler-velden input{padding:12px 14px}
+.speler-weg{background:#f2e9e9;color:var(--rood);border:0;width:36px;height:36px;border-radius:50%;cursor:pointer;font-weight:800;margin-top:24px;flex:none}
+.speler-weg:disabled{opacity:.3;cursor:not-allowed}
+.speler-balk{display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:18px}
+.teller{background:var(--navy);color:#fff;padding:8px 18px;border-radius:999px;font-weight:800}
+.speler-balk select{padding:10px 14px;border-radius:12px;border:2px solid #d9d3c3;font:inherit}
+.speler-plus{width:100%;border:2px dashed var(--groen);background:transparent;color:var(--groen);border-radius:16px;padding:18px;font-weight:800;cursor:pointer;font:inherit;font-weight:800;transition:.2s}
+.speler-plus:hover:not(:disabled){background:rgba(14,122,62,.08)}
+.speler-plus:disabled{opacity:.4;cursor:not-allowed}
+
+/* Review en ticket */
+.review-blok{background:var(--zand);border-radius:14px;padding:18px 20px;margin-bottom:14px}
+.review-kop{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.rij{display:flex;justify-content:space-between;gap:14px;padding:6px 0;border-bottom:1px solid rgba(0,0,0,.06)}
+.rij span{opacity:.7}
+.ticket{background:var(--navy);color:#fff;border-radius:var(--r);padding:26px;position:sticky;top:90px;box-shadow:var(--schaduw)}
+.ticket .rij{border-color:rgba(255,255,255,.12)}
+.ticket-streep{position:relative;border-top:2px dashed rgba(255,255,255,.3);margin:18px -26px}
+.ticket-streep::before,.ticket-streep::after{content:'';position:absolute;top:-14px;width:26px;height:26px;border-radius:50%;background:var(--creme)}
+.ticket-streep::before{left:-13px}.ticket-streep::after{right:-13px}
+.ticket .balk{margin:8px 0 4px}
+
+/* Bevestiging */
+.bevestiging{text-align:center;padding:150px 0 90px;max-width:620px;margin:0 auto}
+.groot-vink{width:110px;height:110px;border-radius:50%;background:var(--gras);color:#fff;font-size:3.6rem;display:grid;place-items:center;margin:0 auto 22px;animation:pop .6s}
+@keyframes pop{from{transform:scale(0)}60%{transform:scale(1.15)}}
+.bevestiging .ticket{position:static;text-align:left;margin:28px 0}
+.nr{font-family:'Anton';font-size:2.2rem;color:var(--goud);letter-spacing:2px}
+.confetti i{position:fixed;top:-20px;width:10px;height:16px;z-index:60;animation:val 3s linear forwards}
+@keyframes val{to{transform:translateY(105vh) rotate(720deg)}}
+
+/* Admin */
+body.admin main{padding:110px 0 70px;min-height:80vh}
+.stat{background:#fff;padding:24px;border-radius:var(--r);box-shadow:var(--schaduw)}
+.stat b{display:block;font-family:'Anton';font-weight:400;font-size:2.8rem;color:var(--groen)}
+.tabel-wrap{overflow-x:auto;border-radius:var(--r);box-shadow:var(--schaduw)}
+.tabel{width:100%;border-collapse:collapse;background:#fff;min-width:760px}
+.tabel th{background:var(--navy);color:#fff;text-align:left;padding:12px 14px;font-size:.8rem;text-transform:uppercase;letter-spacing:.05em}
+.tabel td{padding:12px 14px;border-bottom:1px solid #eee;font-size:.9rem;vertical-align:middle}
+.tabel select{padding:6px 8px;border-radius:8px;border:1px solid #ccc;font:inherit;font-size:.85rem}
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}
+.filters input,.filters select{padding:11px 14px;border-radius:12px;border:2px solid #d9d3c3;font:inherit;background:#fff}
+.badge{display:inline-block;padding:3px 12px;border-radius:999px;font-size:.75rem;font-weight:800}
+.b-ingeschreven,.b-goedgekeurd{background:#d8f5e3;color:#0b6a35}
+.b-in-behandeling,.b-nieuw{background:#fff1cc;color:#7a5500}
+.b-wachtlijst{background:#dfe9ff;color:#1d3f9c}
+.b-afgewezen,.b-geannuleerd{background:#fde2e2;color:#8a1c1c}
+.login-doos{max-width:430px;margin:0 auto}
+
+/* Footer */
+.site-footer{background:var(--navy);color:#cfd8e3;padding:70px 0 24px;margin-top:0;background-image:radial-gradient(circle at 90% 120%,transparent 160px,rgba(255,255,255,.06) 161px,rgba(255,255,255,.06) 164px,transparent 165px)}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:30px}
+.site-footer h4{color:#fff;font-family:'Anton';font-weight:400;letter-spacing:1px;text-transform:uppercase;margin-bottom:10px}
+.site-footer a{display:block;margin-bottom:6px;opacity:.85}
+.site-footer a:hover{color:var(--goud)}
+.site-footer .logo{display:inline-block;margin-bottom:10px}
+.copy{margin-top:40px;padding-top:20px;border-top:1px solid rgba(255,255,255,.12);font-size:.85rem}
+
+/* Animatie bij scrollen */
+.js .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.js .reveal.zichtbaar{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .reveal{opacity:1;transform:none}}
+
+/* Responsive */
+@media (max-width:980px){
+  .menu-knop{display:flex}
+  .nav{position:fixed;top:64px;left:0;right:0;flex-direction:column;align-items:flex-start;background:var(--navy);padding:24px 6%;display:none;gap:18px}
+  .nav.open{display:flex}
+  .grid3,.grid4,.grid2{grid-template-columns:1fr 1fr}
+  .inschrijf{grid-template-columns:1fr}
+  .ticket{position:static;order:-1}
+  .keuze-grid{grid-template-columns:repeat(3,1fr)}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .schuin{clip-path:none;margin:0;padding:80px 0}
+}
+@media (max-width:640px){
+  .grid3,.grid4,.grid2,.rij2,.footer-grid{grid-template-columns:1fr}
+  .keuze-grid{grid-template-columns:repeat(2,1fr)}
+  .speler-velden{grid-template-columns:1fr}
+  .stepper li span{display:none}
+  .stepper li.actief span{display:inline}
+  .paneel{padding:22px}
+  .btn{width:100%}
+  .btn-klein{width:auto}
+  .hero{padding:120px 0 170px}
+  .t-kaart{min-height:380px}
+}
